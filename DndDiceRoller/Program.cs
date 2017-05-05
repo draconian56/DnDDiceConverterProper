@@ -7,7 +7,12 @@ using System.Windows.Forms;
 namespace DndDiceRoller {
     static class Program {
         /// <summary>
-        /// The main entry point for the application.
+        /// This is a dice roller for the game Dungeons and Dragons
+        /// and it is my aim to offer a number of features that
+        /// make it a useful tool for DnD player.
+        /// 
+        /// Aydan Hardidge 
+        /// May 2017
         /// </summary>
         [STAThread]
         static void Main() {

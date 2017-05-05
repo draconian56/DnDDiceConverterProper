@@ -23,7 +23,7 @@ namespace DndDiceRoller {
         }
         // displays the output from the dice rolls
         private void outPutBox_TextChanged(object sender, EventArgs e) {
-
+            outPutBox.ScrollBars = ScrollBars.Vertical;
         }
         // tells the program to start calculations
         private void calcButton_Click(object sender, EventArgs e) {
@@ -54,21 +54,26 @@ namespace DndDiceRoller {
             int total = 0;
             Random rnd = new Random();
 
+            // The actual random Number generation is performed here
             for (int i = 1; i <= diceRolled; i++) {
                 int numberofRolls = rnd.Next(1, diceHasSides + 1);
+                // Outputs each value that is rolled seperately
                 Output(numberofRolls);
+                // Adds all the results for toal which is printed below
                 total = total + numberofRolls;
             }
 
             Output(total);
         }
 
+        // Method to print to the outPutBox that allows multiple lines
+        // written into the textbox
         void Output(int value) {
-            outPutBox.Text += value.ToString("F2") + Environment.NewLine;
+            outPutBox.Text += value.ToString("") + Environment.NewLine;
         }
 
         private void quitButton_Click(object sender, EventArgs e) {
-            MessageBox.Show("Thanks for using");
+            MessageBox.Show("Thank you for using this program\nGoobye!", "Exit");
             Application.Exit();
         }
     }

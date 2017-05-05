@@ -35,26 +35,29 @@
             // 
             // diceSides
             // 
-            this.diceSides.Location = new System.Drawing.Point(97, 105);
+            this.diceSides.Location = new System.Drawing.Point(22, 42);
+            this.diceSides.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.diceSides.Name = "diceSides";
-            this.diceSides.Size = new System.Drawing.Size(197, 31);
+            this.diceSides.Size = new System.Drawing.Size(127, 20);
             this.diceSides.TabIndex = 0;
             this.diceSides.TextChanged += new System.EventHandler(this.diceSides_TextChanged);
             // 
             // outPutBox
             // 
-            this.outPutBox.Location = new System.Drawing.Point(773, 96);
+            this.outPutBox.Location = new System.Drawing.Point(341, 122);
+            this.outPutBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.outPutBox.Multiline = true;
             this.outPutBox.Name = "outPutBox";
-            this.outPutBox.Size = new System.Drawing.Size(232, 358);
+            this.outPutBox.Size = new System.Drawing.Size(120, 203);
             this.outPutBox.TabIndex = 1;
             this.outPutBox.TextChanged += new System.EventHandler(this.outPutBox_TextChanged);
             // 
             // amountOfRolls
             // 
-            this.amountOfRolls.Location = new System.Drawing.Point(99, 243);
+            this.amountOfRolls.Location = new System.Drawing.Point(341, 42);
+            this.amountOfRolls.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.amountOfRolls.Name = "amountOfRolls";
-            this.amountOfRolls.Size = new System.Drawing.Size(197, 31);
+            this.amountOfRolls.Size = new System.Drawing.Size(120, 20);
             this.amountOfRolls.TabIndex = 2;
             this.amountOfRolls.TextChanged += new System.EventHandler(this.amountOfRolls_TextChanged);
             // 
@@ -62,9 +65,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label1.Location = new System.Drawing.Point(92, 50);
+            this.label1.Location = new System.Drawing.Point(18, 9);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(262, 37);
+            this.label1.Size = new System.Drawing.Size(131, 20);
             this.label1.TabIndex = 3;
             this.label1.Text = "What sided dice?";
             // 
@@ -72,9 +76,10 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label2.Location = new System.Drawing.Point(92, 174);
+            this.label2.Location = new System.Drawing.Point(337, 9);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(253, 37);
+            this.label2.Size = new System.Drawing.Size(124, 20);
             this.label2.TabIndex = 4;
             this.label2.Text = "How many rolls?";
             // 
@@ -82,18 +87,20 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label3.Location = new System.Drawing.Point(766, 50);
+            this.label3.Location = new System.Drawing.Point(337, 90);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(122, 37);
+            this.label3.Size = new System.Drawing.Size(63, 20);
             this.label3.TabIndex = 5;
             this.label3.Text = "Results";
             // 
             // calcButton
             // 
             this.calcButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.calcButton.Location = new System.Drawing.Point(450, 131);
+            this.calcButton.Location = new System.Drawing.Point(200, 85);
+            this.calcButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.calcButton.Name = "calcButton";
-            this.calcButton.Size = new System.Drawing.Size(171, 48);
+            this.calcButton.Size = new System.Drawing.Size(110, 25);
             this.calcButton.TabIndex = 6;
             this.calcButton.Text = "Roll";
             this.calcButton.UseVisualStyleBackColor = true;
@@ -101,9 +108,10 @@
             // 
             // quitButton
             // 
-            this.quitButton.Location = new System.Drawing.Point(773, 483);
+            this.quitButton.Location = new System.Drawing.Point(200, 325);
+            this.quitButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.quitButton.Name = "quitButton";
-            this.quitButton.Size = new System.Drawing.Size(221, 47);
+            this.quitButton.Size = new System.Drawing.Size(110, 24);
             this.quitButton.TabIndex = 7;
             this.quitButton.Text = "Quit";
             this.quitButton.UseVisualStyleBackColor = true;
@@ -111,9 +119,9 @@
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1017, 553);
+            this.ClientSize = new System.Drawing.Size(484, 361);
             this.Controls.Add(this.quitButton);
             this.Controls.Add(this.calcButton);
             this.Controls.Add(this.label3);
@@ -122,8 +130,9 @@
             this.Controls.Add(this.amountOfRolls);
             this.Controls.Add(this.outPutBox);
             this.Controls.Add(this.diceSides);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "DnD Dice Roller";
             this.ResumeLayout(false);
             this.PerformLayout();
 
