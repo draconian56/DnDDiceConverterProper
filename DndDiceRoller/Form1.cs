@@ -26,6 +26,10 @@ namespace DndDiceRoller {
             outPutBox.ScrollBars = ScrollBars.Vertical;
         }
 
+        private void oneAsTwo_CheckedChanged(object sender, EventArgs e) {
+
+        }
+
         private void calcButton_Click(object sender, EventArgs e) {
             int diceRolled;
             int diceHasSides;
@@ -51,8 +55,13 @@ namespace DndDiceRoller {
 
             for (int i = 1; i <= diceRolled; i++) {
                 int numberofRolls = rnd.Next(1, diceHasSides + 1);
-                Output(numberofRolls);
                 total = total + numberofRolls;
+                if (oneAsTwo.Checked) {
+                    if (numberofRolls == 1) {
+                        numberofRolls = 2;
+                    }
+                }
+                Output(numberofRolls);
             }
 
             Output(total);
@@ -73,7 +82,10 @@ namespace DndDiceRoller {
                 amountOfRolls.Text = "";
                 outPutBox.Text = "";
                 clearAllBut.Checked = false;
+                oneAsTwo.Checked = false;
             }
         }
+
+
     }
 }

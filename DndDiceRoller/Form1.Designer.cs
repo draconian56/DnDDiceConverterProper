@@ -32,6 +32,7 @@
             this.calcButton = new System.Windows.Forms.Button();
             this.quitButton = new System.Windows.Forms.Button();
             this.clearAllBut = new System.Windows.Forms.RadioButton();
+            this.oneAsTwo = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // diceSides
@@ -97,6 +98,7 @@
             // 
             // calcButton
             // 
+            this.calcButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.calcButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.calcButton.Location = new System.Drawing.Point(200, 85);
             this.calcButton.Margin = new System.Windows.Forms.Padding(2);
@@ -122,20 +124,34 @@
             // clearAllBut
             // 
             this.clearAllBut.AutoSize = true;
+            this.clearAllBut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.clearAllBut.Location = new System.Drawing.Point(341, 331);
             this.clearAllBut.Name = "clearAllBut";
-            this.clearAllBut.Size = new System.Drawing.Size(62, 17);
+            this.clearAllBut.Size = new System.Drawing.Size(61, 17);
             this.clearAllBut.TabIndex = 3;
             this.clearAllBut.TabStop = true;
             this.clearAllBut.Text = "Clear all";
             this.clearAllBut.UseVisualStyleBackColor = true;
             this.clearAllBut.CheckedChanged += new System.EventHandler(this.clearAllBut_CheckedChanged);
             // 
+            // oneAsTwo
+            // 
+            this.oneAsTwo.AutoSize = true;
+            this.oneAsTwo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.oneAsTwo.Location = new System.Drawing.Point(22, 122);
+            this.oneAsTwo.Name = "oneAsTwo";
+            this.oneAsTwo.Size = new System.Drawing.Size(109, 17);
+            this.oneAsTwo.TabIndex = 6;
+            this.oneAsTwo.Text = "Make all 1\'s as 2\'s";
+            this.oneAsTwo.UseVisualStyleBackColor = true;
+            this.oneAsTwo.CheckedChanged += new System.EventHandler(this.oneAsTwo_CheckedChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(484, 361);
+            this.Controls.Add(this.oneAsTwo);
             this.Controls.Add(this.clearAllBut);
             this.Controls.Add(this.quitButton);
             this.Controls.Add(this.calcButton);
@@ -164,6 +180,7 @@
         private System.Windows.Forms.Button calcButton;
         private System.Windows.Forms.Button quitButton;
         private System.Windows.Forms.RadioButton clearAllBut;
+        private System.Windows.Forms.CheckBox oneAsTwo;
     }
 }
 
