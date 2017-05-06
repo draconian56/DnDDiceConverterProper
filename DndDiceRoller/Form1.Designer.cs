@@ -31,12 +31,13 @@
             this.label3 = new System.Windows.Forms.Label();
             this.calcButton = new System.Windows.Forms.Button();
             this.quitButton = new System.Windows.Forms.Button();
+            this.clearAllBut = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
             // 
             // diceSides
             // 
             this.diceSides.Location = new System.Drawing.Point(22, 42);
-            this.diceSides.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.diceSides.Margin = new System.Windows.Forms.Padding(2);
             this.diceSides.Name = "diceSides";
             this.diceSides.Size = new System.Drawing.Size(127, 20);
             this.diceSides.TabIndex = 0;
@@ -45,20 +46,20 @@
             // outPutBox
             // 
             this.outPutBox.Location = new System.Drawing.Point(341, 122);
-            this.outPutBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.outPutBox.Margin = new System.Windows.Forms.Padding(2);
             this.outPutBox.Multiline = true;
             this.outPutBox.Name = "outPutBox";
-            this.outPutBox.Size = new System.Drawing.Size(120, 203);
-            this.outPutBox.TabIndex = 1;
+            this.outPutBox.Size = new System.Drawing.Size(120, 197);
+            this.outPutBox.TabIndex = 4;
             this.outPutBox.TextChanged += new System.EventHandler(this.outPutBox_TextChanged);
             // 
             // amountOfRolls
             // 
             this.amountOfRolls.Location = new System.Drawing.Point(341, 42);
-            this.amountOfRolls.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.amountOfRolls.Margin = new System.Windows.Forms.Padding(2);
             this.amountOfRolls.Name = "amountOfRolls";
             this.amountOfRolls.Size = new System.Drawing.Size(120, 20);
-            this.amountOfRolls.TabIndex = 2;
+            this.amountOfRolls.TabIndex = 1;
             this.amountOfRolls.TextChanged += new System.EventHandler(this.amountOfRolls_TextChanged);
             // 
             // label1
@@ -98,30 +99,44 @@
             // 
             this.calcButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.calcButton.Location = new System.Drawing.Point(200, 85);
-            this.calcButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.calcButton.Margin = new System.Windows.Forms.Padding(2);
             this.calcButton.Name = "calcButton";
             this.calcButton.Size = new System.Drawing.Size(110, 25);
-            this.calcButton.TabIndex = 6;
+            this.calcButton.TabIndex = 2;
             this.calcButton.Text = "Roll";
             this.calcButton.UseVisualStyleBackColor = true;
             this.calcButton.Click += new System.EventHandler(this.calcButton_Click);
             // 
             // quitButton
             // 
+            this.quitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.quitButton.Location = new System.Drawing.Point(200, 325);
-            this.quitButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.quitButton.Margin = new System.Windows.Forms.Padding(2);
             this.quitButton.Name = "quitButton";
             this.quitButton.Size = new System.Drawing.Size(110, 24);
-            this.quitButton.TabIndex = 7;
+            this.quitButton.TabIndex = 5;
             this.quitButton.Text = "Quit";
             this.quitButton.UseVisualStyleBackColor = true;
             this.quitButton.Click += new System.EventHandler(this.quitButton_Click);
+            // 
+            // clearAllBut
+            // 
+            this.clearAllBut.AutoSize = true;
+            this.clearAllBut.Location = new System.Drawing.Point(341, 331);
+            this.clearAllBut.Name = "clearAllBut";
+            this.clearAllBut.Size = new System.Drawing.Size(62, 17);
+            this.clearAllBut.TabIndex = 3;
+            this.clearAllBut.TabStop = true;
+            this.clearAllBut.Text = "Clear all";
+            this.clearAllBut.UseVisualStyleBackColor = true;
+            this.clearAllBut.CheckedChanged += new System.EventHandler(this.clearAllBut_CheckedChanged);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(484, 361);
+            this.Controls.Add(this.clearAllBut);
             this.Controls.Add(this.quitButton);
             this.Controls.Add(this.calcButton);
             this.Controls.Add(this.label3);
@@ -130,7 +145,7 @@
             this.Controls.Add(this.amountOfRolls);
             this.Controls.Add(this.outPutBox);
             this.Controls.Add(this.diceSides);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "DnD Dice Roller";
             this.ResumeLayout(false);
@@ -148,6 +163,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button calcButton;
         private System.Windows.Forms.Button quitButton;
+        private System.Windows.Forms.RadioButton clearAllBut;
     }
 }
 
