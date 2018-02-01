@@ -14,32 +14,16 @@ namespace DndDiceRoller {
             InitializeComponent();
         }
 
-        private void diceSides_TextChanged(object sender, EventArgs e) {
-
-        }
-
-        private void amountOfRolls_TextChanged(object sender, EventArgs e) {
-
-        }
-
-        private void outPutBox_TextChanged(object sender, EventArgs e) {
-            outPutBox.ScrollBars = ScrollBars.Vertical;
-        }
-
-        private void oneAsTwo_CheckedChanged(object sender, EventArgs e) {
-
-        }
-
         private void calcButton_Click(object sender, EventArgs e) {
             int diceRolled;
             int diceHasSides;
 
             outPutBox.Text = "";
 
-            if(!int.TryParse(diceSides.Text, out diceHasSides)) {
+            if(!int.TryParse(DinceNumber.Text, out diceHasSides)) {
                 MessageBox.Show("Are you sure that's a number?");
-                diceSides.Text = "";
-                diceSides.Focus();
+                DinceNumber.Text = "";
+                DinceNumber.Focus();
                 return;
             }
 
@@ -56,11 +40,19 @@ namespace DndDiceRoller {
             for (int i = 1; i <= diceRolled; i++) {
                 int numberofRolls = rnd.Next(1, diceHasSides + 1);
                 total = total + numberofRolls;
+
                 if (oneAsTwo.Checked) {
                     if (numberofRolls == 1) {
                         numberofRolls = 2;
                     }
                 }
+
+                if (RerollOnes.Checked) {
+                    if (numberofRolls == 1) {
+                        numberofRolls = rnd.Next(1, diceHasSides + 1);
+                    }
+                }
+
                 Output(numberofRolls);
             }
 
@@ -76,16 +68,36 @@ namespace DndDiceRoller {
             Application.Exit();
         }
 
-        private void clearAllBut_CheckedChanged(object sender, EventArgs e) {
-            if (clearAllBut.Checked) {
-                diceSides.Text = "";
-                amountOfRolls.Text = "";
-                outPutBox.Text = "";
-                clearAllBut.Checked = false;
-                oneAsTwo.Checked = false;
-            }
+        private void ClearAll_Click(object sender, EventArgs e) {
+            DinceNumber.Text = "";
+            amountOfRolls.Text = "";
+            outPutBox.Text = "";
+            oneAsTwo.Checked = false;
+            RerollOnes.Checked = false;
         }
 
+        private void diceSides_TextChanged(object sender, EventArgs e) {
 
+        }
+
+        private void amountOfRolls_TextChanged(object sender, EventArgs e) {
+
+        }
+
+        private void outPutBox_TextChanged(object sender, EventArgs e) {
+            outPutBox.ScrollBars = ScrollBars.Vertical;
+        }
+
+        private void oneAsTwo_CheckedChanged(object sender, EventArgs e) {
+
+        }
+
+        private void RerollOnes_CheckedChanged(object sender, EventArgs e) {
+
+        }
+
+        private void DinceNumber_SelectedIndexChanged(object sender, EventArgs e) {
+
+        }
     }
 }

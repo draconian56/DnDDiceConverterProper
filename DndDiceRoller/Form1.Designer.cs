@@ -23,7 +23,6 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
-            this.diceSides = new System.Windows.Forms.TextBox();
             this.outPutBox = new System.Windows.Forms.TextBox();
             this.amountOfRolls = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -31,35 +30,28 @@
             this.label3 = new System.Windows.Forms.Label();
             this.calcButton = new System.Windows.Forms.Button();
             this.quitButton = new System.Windows.Forms.Button();
-            this.clearAllBut = new System.Windows.Forms.RadioButton();
             this.oneAsTwo = new System.Windows.Forms.CheckBox();
+            this.RerollOnes = new System.Windows.Forms.CheckBox();
+            this.ClearAll = new System.Windows.Forms.Button();
+            this.DinceNumber = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
-            // 
-            // diceSides
-            // 
-            this.diceSides.Location = new System.Drawing.Point(22, 42);
-            this.diceSides.Margin = new System.Windows.Forms.Padding(2);
-            this.diceSides.Name = "diceSides";
-            this.diceSides.Size = new System.Drawing.Size(127, 20);
-            this.diceSides.TabIndex = 0;
-            this.diceSides.TextChanged += new System.EventHandler(this.diceSides_TextChanged);
             // 
             // outPutBox
             // 
-            this.outPutBox.Location = new System.Drawing.Point(341, 122);
-            this.outPutBox.Margin = new System.Windows.Forms.Padding(2);
+            this.outPutBox.Location = new System.Drawing.Point(702, 50);
+            this.outPutBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.outPutBox.Multiline = true;
             this.outPutBox.Name = "outPutBox";
-            this.outPutBox.Size = new System.Drawing.Size(120, 197);
+            this.outPutBox.Size = new System.Drawing.Size(236, 339);
             this.outPutBox.TabIndex = 4;
             this.outPutBox.TextChanged += new System.EventHandler(this.outPutBox_TextChanged);
             // 
             // amountOfRolls
             // 
-            this.amountOfRolls.Location = new System.Drawing.Point(341, 42);
-            this.amountOfRolls.Margin = new System.Windows.Forms.Padding(2);
+            this.amountOfRolls.Location = new System.Drawing.Point(390, 65);
+            this.amountOfRolls.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.amountOfRolls.Name = "amountOfRolls";
-            this.amountOfRolls.Size = new System.Drawing.Size(120, 20);
+            this.amountOfRolls.Size = new System.Drawing.Size(236, 31);
             this.amountOfRolls.TabIndex = 1;
             this.amountOfRolls.TextChanged += new System.EventHandler(this.amountOfRolls_TextChanged);
             // 
@@ -67,10 +59,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label1.Location = new System.Drawing.Point(18, 9);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(35, 9);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(131, 20);
+            this.label1.Size = new System.Drawing.Size(262, 37);
             this.label1.TabIndex = 3;
             this.label1.Text = "What sided dice?";
             // 
@@ -78,10 +70,10 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label2.Location = new System.Drawing.Point(337, 9);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(383, 9);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(124, 20);
+            this.label2.Size = new System.Drawing.Size(253, 37);
             this.label2.TabIndex = 4;
             this.label2.Text = "How many rolls?";
             // 
@@ -89,10 +81,10 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label3.Location = new System.Drawing.Point(337, 90);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(695, 9);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(63, 20);
+            this.label3.Size = new System.Drawing.Size(122, 37);
             this.label3.TabIndex = 5;
             this.label3.Text = "Results";
             // 
@@ -100,10 +92,10 @@
             // 
             this.calcButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.calcButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.calcButton.Location = new System.Drawing.Point(200, 85);
-            this.calcButton.Margin = new System.Windows.Forms.Padding(2);
+            this.calcButton.Location = new System.Drawing.Point(406, 209);
+            this.calcButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.calcButton.Name = "calcButton";
-            this.calcButton.Size = new System.Drawing.Size(110, 25);
+            this.calcButton.Size = new System.Drawing.Size(220, 48);
             this.calcButton.TabIndex = 2;
             this.calcButton.Text = "Roll";
             this.calcButton.UseVisualStyleBackColor = true;
@@ -112,47 +104,75 @@
             // quitButton
             // 
             this.quitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.quitButton.Location = new System.Drawing.Point(200, 325);
-            this.quitButton.Margin = new System.Windows.Forms.Padding(2);
+            this.quitButton.Location = new System.Drawing.Point(406, 401);
+            this.quitButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.quitButton.Name = "quitButton";
-            this.quitButton.Size = new System.Drawing.Size(110, 24);
+            this.quitButton.Size = new System.Drawing.Size(220, 46);
             this.quitButton.TabIndex = 5;
             this.quitButton.Text = "Quit";
             this.quitButton.UseVisualStyleBackColor = true;
             this.quitButton.Click += new System.EventHandler(this.quitButton_Click);
             // 
-            // clearAllBut
-            // 
-            this.clearAllBut.AutoSize = true;
-            this.clearAllBut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.clearAllBut.Location = new System.Drawing.Point(341, 331);
-            this.clearAllBut.Name = "clearAllBut";
-            this.clearAllBut.Size = new System.Drawing.Size(61, 17);
-            this.clearAllBut.TabIndex = 3;
-            this.clearAllBut.TabStop = true;
-            this.clearAllBut.Text = "Clear all";
-            this.clearAllBut.UseVisualStyleBackColor = true;
-            this.clearAllBut.CheckedChanged += new System.EventHandler(this.clearAllBut_CheckedChanged);
-            // 
             // oneAsTwo
             // 
             this.oneAsTwo.AutoSize = true;
             this.oneAsTwo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.oneAsTwo.Location = new System.Drawing.Point(22, 122);
+            this.oneAsTwo.Location = new System.Drawing.Point(55, 183);
+            this.oneAsTwo.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.oneAsTwo.Name = "oneAsTwo";
-            this.oneAsTwo.Size = new System.Drawing.Size(109, 17);
+            this.oneAsTwo.Size = new System.Drawing.Size(215, 29);
             this.oneAsTwo.TabIndex = 6;
             this.oneAsTwo.Text = "Make all 1\'s as 2\'s";
             this.oneAsTwo.UseVisualStyleBackColor = true;
             this.oneAsTwo.CheckedChanged += new System.EventHandler(this.oneAsTwo_CheckedChanged);
             // 
+            // RerollOnes
+            // 
+            this.RerollOnes.AutoSize = true;
+            this.RerollOnes.Location = new System.Drawing.Point(73, 321);
+            this.RerollOnes.Name = "RerollOnes";
+            this.RerollOnes.Size = new System.Drawing.Size(161, 29);
+            this.RerollOnes.TabIndex = 7;
+            this.RerollOnes.Text = "Reroll all 1\'s";
+            this.RerollOnes.UseVisualStyleBackColor = true;
+            this.RerollOnes.CheckedChanged += new System.EventHandler(this.RerollOnes_CheckedChanged);
+            // 
+            // ClearAll
+            // 
+            this.ClearAll.Location = new System.Drawing.Point(715, 417);
+            this.ClearAll.Name = "ClearAll";
+            this.ClearAll.Size = new System.Drawing.Size(188, 46);
+            this.ClearAll.TabIndex = 8;
+            this.ClearAll.Text = "Clear";
+            this.ClearAll.UseVisualStyleBackColor = true;
+            this.ClearAll.Click += new System.EventHandler(this.ClearAll_Click);
+            // 
+            // DinceNumber
+            // 
+            this.DinceNumber.FormattingEnabled = true;
+            this.DinceNumber.Items.AddRange(new object[] {
+            "4",
+            "6",
+            "8",
+            "10",
+            "12",
+            "20",
+            "100"});
+            this.DinceNumber.Location = new System.Drawing.Point(42, 65);
+            this.DinceNumber.Name = "DinceNumber";
+            this.DinceNumber.Size = new System.Drawing.Size(254, 33);
+            this.DinceNumber.TabIndex = 9;
+            this.DinceNumber.SelectedIndexChanged += new System.EventHandler(this.DinceNumber_SelectedIndexChanged);
+            // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(484, 361);
+            this.ClientSize = new System.Drawing.Size(968, 502);
+            this.Controls.Add(this.DinceNumber);
+            this.Controls.Add(this.ClearAll);
+            this.Controls.Add(this.RerollOnes);
             this.Controls.Add(this.oneAsTwo);
-            this.Controls.Add(this.clearAllBut);
             this.Controls.Add(this.quitButton);
             this.Controls.Add(this.calcButton);
             this.Controls.Add(this.label3);
@@ -160,8 +180,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.amountOfRolls);
             this.Controls.Add(this.outPutBox);
-            this.Controls.Add(this.diceSides);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Form1";
             this.Text = "DnD Dice Roller";
             this.ResumeLayout(false);
@@ -170,8 +189,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox diceSides;
         private System.Windows.Forms.TextBox outPutBox;
         private System.Windows.Forms.TextBox amountOfRolls;
         private System.Windows.Forms.Label label1;
@@ -179,8 +196,10 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button calcButton;
         private System.Windows.Forms.Button quitButton;
-        private System.Windows.Forms.RadioButton clearAllBut;
         private System.Windows.Forms.CheckBox oneAsTwo;
+        private System.Windows.Forms.CheckBox RerollOnes;
+        private System.Windows.Forms.Button ClearAll;
+        private System.Windows.Forms.ComboBox DinceNumber;
     }
 }
 
