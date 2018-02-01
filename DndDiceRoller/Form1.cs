@@ -34,6 +34,7 @@ namespace DndDiceRoller {
                 return;
             }
 
+            int rollCheck = 0;
             int total = 0;
             Random rnd = new Random();
 
@@ -48,8 +49,11 @@ namespace DndDiceRoller {
                 }
 
                 if (RerollOnes.Checked) {
-                    if (numberofRolls == 1) {
-                        numberofRolls = rnd.Next(1, diceHasSides + 1);
+                    if (rollCheck != 1) {
+                        if (numberofRolls == 1) {
+                            numberofRolls = rnd.Next(1, diceHasSides + 1);
+                            rollCheck = 1;
+                        }
                     }
                 }
 
